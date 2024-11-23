@@ -1,6 +1,6 @@
-//export const MONGODB_CONNECTION = "mongodb+srv://mrrabbil:mernx123@cluster0.rtpbcy6.mongodb.net/app_todo?retryWrites=true&w=majority";
+export const MONGODB_CONNECTION = "mongodb+srv://mrrabbil:mernx123@cluster0.rtpbcy6.mongodb.net/app_todo?retryWrites=true&w=majority";
 
-export const MONGODB_CONNECTION="mongodb://localhost:27017/mernDB"
+//export const MONGODB_CONNECTION="mongodb://localhost:27017/mernDB"
 //export const MONGODB_CONNECTION="mongodb+srv://akama2253:VpcAyvoSBBQuznwy@cluster0.ihrgx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 //mongodb+srv://myDatabaseUser:D1fficultP%40ssw0rd@mongodb0.example.com/?authSource=admin&replicaSet=myRepl
 //mongodb+srv://[username:password@]host[/[defaultauthdb][?options]]
