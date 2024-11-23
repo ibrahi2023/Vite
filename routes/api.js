@@ -13,6 +13,4 @@ router.post('/editClient', ClientController.EditClient);
 router.get('/GetClient', ClientController.GetClient);
 router.post('/GetMatricule', ClientController.GetMatricule);
 router.post('/GetDashClient', ClientController.GetDashClient);
-
-
 export default router;
