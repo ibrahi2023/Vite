@@ -1,7 +1,7 @@
 {
   "name": "mern-x",
   "version": "1.0.0",
-  "description": "MERN-X is a comprehensive full-stack project structure designed to streamline the development of web applications using the popular MERN stack: MongoDB, Express.js, React, and Node.js. Built with simplicity and scalability in mind, MERN.js empowers developers to create robust and efficient applications from end to end.",
+  "description": "",
   "main": "app.js",
   "type": "module",
   "scripts": {
@@ -9,15 +9,8 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "mern": "node app/config/cli.js run:mernx",
-    "start": "concurrently \"npm run dev \" \"npm run mern\"",
-    "create:model": "node app/config/cli.js make:model",
-    "create:controller": "node app/config/cli.js make:controller",
-    "create:middleware": "node app/config/cli.js make:middleware",
-    "create:page": "node app/config/cli.js make:page",
-    "create:component": "node app/config/cli.js make:component",
-    "create:loader": "node app/config/cli.js make:loader",
-    "create:layout": "node app/config/cli.js make:layout"
+    "mern": "node app.js run:mernx",
+    "start": "concurrently \"npm run dev \" \"npm run mern\""
   },
   "keywords": [
     "MERN",
@@ -28,7 +21,7 @@
     "Node JS",
     "MERN Project"
   ],
-  "author": "MERN-X",
+  "author": "SOND-JS",
   "license": "ISC",
   "dependencies": {
     "@coreui/coreui": "^5.1.2",
