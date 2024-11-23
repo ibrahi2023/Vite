@@ -1,12 +1,7 @@
 import express from 'express';
 const router = express.Router();
-import * as todoController from '../app/controllers/todoController.js';
 import * as userController from "../app/controllers/authController.js";
 import * as ClientController from "../app/controllers/ClientControler.js";
-
-router.post('/store', todoController.store);
-router.get('/show', todoController.show);
-router.delete('/destroy/:id', todoController.destroy);
 router.post("/signup",userController.signup);
 router.post("/signin",userController.signin);
 router.post('/updatesign', userController.ValideEdite);
