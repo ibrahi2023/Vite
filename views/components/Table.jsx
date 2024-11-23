@@ -60,9 +60,6 @@ const DataTabletd = (props) => {
     console.log("error")
   }
    } 
-
-
- 
  return (<>{ result.length >0 ?(<> <main className="flex-1 items-left mt-1 h-fit px-1">
        <div style={{width: "99.9%"}} id='recipients' className="p-3 mt-6 lg:mt-0 rounded shadow bg-white">
         <div className="w-full  bg-slate-100 py-3">
@@ -74,7 +71,7 @@ const DataTabletd = (props) => {
                 </svg>
                 Ajouter Compte
               </button></div>
-                </div>        
+             </div>        
       </div>
       </div>
     </main>
@@ -104,7 +101,6 @@ const DataTabletd = (props) => {
             <button title="Validation Compte" onClick={()=>SupprimerUser(items)} className="bg-red-50 shadow-sm px-4 py-0 rounded-md hover:bg-red-200 focus:bg-red-400 border border-red-500" >
               <SupprimerIcon />
             </button>
-          
             </td>
             <td>{items.username}</td>
             <td>{items.email}</td>

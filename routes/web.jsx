@@ -31,9 +31,6 @@ const Web = () => {
                 <Route path="/GetEditClient" element={<GetEditClient />}/> 
                 <Route path="/GetAddClient" element={<GetAddClient />}/> 
                 <Route path="/dashboard" element={<Dashboard />}/> 
-              
-                
-          
             </Routes>
         </BrowserRouter>
     );

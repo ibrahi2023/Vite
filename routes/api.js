@@ -15,6 +15,9 @@ router.post('/DelleteCompte', userController.DelleteUser);
 router.get('/GetUsers', userController.GetUser);
 router.post('/AddClient', ClientController.AddClient);
 router.post('/editClient', ClientController.EditClient);
-router.post('/GetClient', ClientController.GetClient);
+router.get('/GetClient', ClientController.GetClient);
 router.post('/GetMatricule', ClientController.GetMatricule);
+router.post('/GetDashClient', ClientController.GetDashClient);
+
+
 export default router;

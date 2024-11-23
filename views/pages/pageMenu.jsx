@@ -1,13 +1,16 @@
-import React ,{useState}from 'react'
+import React ,{useState,useEffect}from 'react'
 import {useNavigate} from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import PageChild from "../pages/PageChild.jsx";
-
+//import { StreamChat } from 'stream-chat'
 export default function PageMenu() {
   const [Responce,Setresponce]=useState();
   const location = useLocation();
   const user = location.state?.user;
   const navigate=useNavigate();
+  // useEffect(()=>{
+  //   //connection();
+  // },[])
   const handlechange=async(e)=>{
     try {
         switch(e){
@@ -19,7 +22,40 @@ export default function PageMenu() {
         res.status(500).json({error:"error link introuvable"})
     }
    
-  } 
+  }
+// async function connection() {
+//   try {
+//     const client = StreamChat.getInstance("{{ api_key }}");
+// await client.connectUser(
+//   {
+//     id: 'jlahey',
+//     name: 'Jim Lahey',
+//     image: 'https://i.imgur.com/fR9Jz14.png',
+//   },
+//   "{{ chat_user_token }}",
+// )
+
+
+//     const channel = client.channel('messaging', {
+//       members: ['vishal', 'neil'],
+//      name: 'Awesome channel about traveling'
+//    });
+//    await channel.watch();
+  
+//    const text = 'I’m mowing the air Randy, I’m mowing the air.';
+
+// const response = await channel.sendMessage({
+//   text,
+//   customField: '123',
+// });
+
+
+   
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+ 
   return (
     <PageChild>
       <main className="p-6 sm:p-10 space-y-6">

@@ -7,18 +7,19 @@ const ListPageClient = () => {
     const [Datauser,SetRespanse]=useState([]);
     const location = useLocation();
     const data = location.state?.user;
-    console.log(data);
     useEffect(() => {
         Getclient();
        }, []);
      
       async function  Getclient() {
-        const response=  await fetch('/api/GetClient', {method: 'POST',
-         headers:{'Content-Type':'application/json'}, 
-         body:JSON.stringify(data)});
+        const response=  await fetch('/api/GetClient', {method: 'GET'});
          const result = await response.json();
-        SetRespanse(result);
+         const filter = result.filter((obj, index) => {
+            return index === result.findIndex(o => obj.matricule === o.matricule);
+        });
+        SetRespanse(filter);
       }
+
     if(!data) return;
     return (
         <HeaderChild>

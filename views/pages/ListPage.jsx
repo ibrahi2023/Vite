@@ -7,7 +7,6 @@ const ListPage = () => {
     const [Datauser,SetRespanse]=useState([]);
     const location = useLocation();
     const data = location.state?.user;
-    console.log(data);
     useEffect(() => {
         Getusers();
        }, []);

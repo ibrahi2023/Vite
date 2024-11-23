@@ -8,25 +8,16 @@ export default function AddClient(props) {
     const [loading, setLoading] = useState(false);
     const [ResponseData, setResponse] = useState("");
     const navigate =useNavigate();
-    const PHtype=["Ccee","ccee","CCee","CCEE","CCEe","CcEE","CcEe","ccEe","ccEE"]
     const handleChange = (e) => {
         const { name, value } = e.target;
         setdivData(prevState => ({...prevState, [name]: value}));
     };
-    const handleChange3 = () => {
+    const handleChange3 = (e) => {
+        const { name, value } = e.target;
+        setdivData(prevState => ({...prevState, [name]: value}));
         const dat=new  Date();
         const annee =dat.getFullYear();
         const month=dat.getMonth()+1;
-        switch(divData.groupe_sanguin){
-        case "A+" :setdivData(prevState => ({...prevState, ["phenotype"]: PHtype[0]}));break;
-        case "A-" :setdivData(prevState => ({...prevState, ["phenotype"]: PHtype[1]}));break;
-        case "B+" :setdivData(prevState => ({...prevState, ["phenotype"]: PHtype[2]}));break;
-        case "B-" :setdivData(prevState => ({...prevState, ["phenotype"]: PHtype[3]}));break;
-        case "AB+" :setdivData(prevState => ({...prevState, ["phenotype"]: PHtype[4]}));break;
-        case "AB-" :setdivData(prevState => ({...prevState, ["phenotype"]: PHtype[5]}));break;
-        case "O+" :setdivData(prevState => ({...prevState, ["phenotype"]: PHtype[6]}));break;
-        case "O-" :setdivData(prevState => ({...prevState, ["phenotype"]: PHtype[7]}));break;
-        }
         setdivData(prevState=>({...prevState,["annee"]:annee}));
         setdivData(prevState=>({...prevState,["month"]:month}));
     };
@@ -225,8 +216,19 @@ export default function AddClient(props) {
         <label className="block  tracking-wide text-grey-darker text-xs font-normal mb-2">
          Phenotype 
         </label>
-        <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
-        defaultValue={divData.phenotype} onClick={handleChange3} placeholder="phenotype" name="phenotype" type="text" />
+        <select className="appearance-none block bg-white w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4"
+        defaultValue={divData.phenotype} onClick={handleChange3} placeholder="phenotype" name="phenotype">
+          <option value="">...</option>
+          <option value="Ccee">Ccee</option>
+          <option value="ccee">ccee</option> 
+          <option value="CCee">CCee</option>
+          <option value="CCEE">CCEE</option>
+          <option value="CCEe">CCEe</option>
+          <option value="CcEE">CcEE</option>
+          <option value="CcEe">CcEe</option>
+          <option value="ccEe">ccEe</option>
+          <option value="ccEE">ccEE</option>
+            </select>
     </div>
     <div className="md:w-1/2 px-3">
         <label className="block  tracking-wide text-grey-darker text-xs font-normal mb-2">

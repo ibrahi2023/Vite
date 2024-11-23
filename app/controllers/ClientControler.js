@@ -27,10 +27,9 @@ export const AddClient = async(req, res) => {
        }
   };
   export const GetClient =async (req, res) => {
-    const {Opital}=req.body;
-   // console.log(req.body)
+
     try {
-     const result=await Client.find({ CTS: Opital})
+     const result=await Client.find({});
      res.status(200).json(result);
     }catch(err){
      res.status(500).json({message:"error get data"});
@@ -45,3 +44,19 @@ export const AddClient = async(req, res) => {
        res.status(500).json({message:"error get data"});
        }
       }
+      export const GetDashClient =async (req, res) => {
+        const{wilaya,commune,CTS,checkedwilaya,checkecommune,checkedCTS}=req.body;
+       // User.find({$or:[{region: "NA"},{sector:"Some Sector"}]} 
+
+        try {
+        if(checkedwilaya ==true  && checkecommune==false && checkedCTS==false)  var result=await Client.find({wilaya:wilaya});
+        else if(checkedwilaya ==true && checkecommune==true && checkedCTS==false )  var result=await Client.find({wilaya:wilaya,commune:commune});
+        else if(checkedwilaya ==true && checkecommune==true && checkedCTS==true )  var result=await Client.find({wilaya:wilaya,commune:commune,CTS:CTS});
+        else var result=await Client.find({});
+        res.status(200).json(result);
+      }catch(err){
+        res.status(500).json({message:"error get data"});
+        }
+        }
+    
+      

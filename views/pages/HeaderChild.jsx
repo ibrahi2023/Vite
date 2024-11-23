@@ -10,7 +10,7 @@ export default function HeaderChild(props) {
   return (
  <div className="flex bg-gray-100 min-h-screen">
  <Aside data={{user:user,title:title}}/>
-  <div className="flex-grow text-gray-800">
+  <div className="flex-grow text-gray-800 w-full">
   <Header data={{user:user,title:title}} />
       {props.children}  
       </div>
