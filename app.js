@@ -52,7 +52,7 @@ console.log(__dirname);
 // Serve React front end for all routes not handled by the API
 //const __dirname = path.resolve();
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'app', 'index.html'));
 });
 
 app.listen(PORT,()=>{
