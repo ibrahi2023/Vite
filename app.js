@@ -48,11 +48,11 @@ app.use(express.static('dist'));
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-console.log(__dirname);
+console.log(__dirname)
 // Serve React front end for all routes not handled by the API
 //const __dirname = path.resolve();
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'app', 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(PORT,()=>{
