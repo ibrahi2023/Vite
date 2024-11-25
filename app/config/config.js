@@ -4,7 +4,7 @@ export const MONGODB_CONNECTION = "mongodb+srv://mrrabbil:mernx123@cluster0.rtpb
 //export const MONGODB_CONNECTION="mongodb+srv://akama2253:VpcAyvoSBBQuznwy@cluster0.ihrgx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 //mongodb+srv://myDatabaseUser:D1fficultP%40ssw0rd@mongodb0.example.com/?authSource=admin&replicaSet=myRepl
 //mongodb+srv://[username:password@]host[/[defaultauthdb][?options]]
-export const JWT_SECRET = "5EC7CEFA1BE7C9354A639369A2AA8A";
+export const JWT_SECRET = "5EC7CEFA1BE7C9354A639369A2AA8";
 export const JWT_EXPIRATION_TIME = 60*60*24*30; // 30 Days
 
 export const EMAIL_HOST = "";

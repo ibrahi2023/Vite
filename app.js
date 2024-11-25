@@ -2,7 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import router from './routes/api.js';
 import rateLimit from 'express-rate-limit';
-import * as path from "path";
+import path from "path";
 import helmet from 'helmet';
 import hpp from 'hpp';
 import cors from 'cors';
@@ -44,6 +44,7 @@ app.use(express.static('dist'));
 
 
 // Serve React front end for all routes not handled by the API
+//const __dirname = path.resolve();
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
 });
