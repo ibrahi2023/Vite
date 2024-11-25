@@ -45,9 +45,9 @@ app.use(express.static('dist'));
 
 // Serve React front end for all routes not handled by the API
 //const __dirname = path.resolve();
-// app.get('*', (req, res) => {
-//     res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
-// });
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
+});
 
 app.listen(PORT,()=>{
     console.log(`MERN  Server Running ${PORT}`)
