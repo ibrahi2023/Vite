@@ -10,7 +10,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "mern": "node app.js run:mernx",
-    "start": "concurrently \"npm run dev \" \"npm run mern\""
+    "start": "concurrently \"npm run dev -- --host  \" \"npm run mern\""
   },
   "keywords": [
     "MERN",
