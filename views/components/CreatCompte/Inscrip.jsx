@@ -140,7 +140,7 @@ export default function Inscription() {
    {loading?(<span>Rejestre..</span>):(<span>Rejestre</span>)}
     </button>
    <form  className="flex-1">
-   <button  className="bg-green-200 mx-8 block text-gray-600 text-sm uppercase rounded shadow-md px-16 py-2"><Link to={"http://localhost:3001"} >Retour</Link></button>
+   <button  className="bg-green-200 mx-8 block text-gray-600 text-sm uppercase rounded shadow-md px-16 py-2"><Link to={"/"} >Retour</Link></button>
    </form>
   </div>
   </div>
